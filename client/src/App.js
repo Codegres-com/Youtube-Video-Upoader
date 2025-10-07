@@ -64,11 +64,11 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
-      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-2xl">
-        <h1 className="text-3xl font-bold text-center mb-6">YouTube Thumbnail Generator</h1>
-        <div className="mb-6">
-          <label htmlFor="video-upload" className="block text-lg font-medium text-gray-700 mb-2">
+    <div>
+      <div>
+        <h1>YouTube Thumbnail Generator</h1>
+        <div>
+          <label htmlFor="video-upload">
             Upload a video to generate a thumbnail
           </label>
           <input
@@ -76,30 +76,27 @@ function App() {
             type="file"
             accept="video/mp4"
             onChange={handleFileChange}
-            className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100"
           />
         </div>
         {videoSrc && (
-          <div className="mt-6">
-            <h2 className="text-2xl font-semibold mb-4">Your Video</h2>
-            <video src={videoSrc} controls className="w-full rounded-lg" />
+          <div>
+            <h2>Your Video</h2>
+            <video src={videoSrc} controls width="100%" />
             <button
               onClick={generateThumbnail}
               disabled={isLoading}
-              className="mt-4 w-full bg-violet-600 text-white py-2 px-4 rounded-lg hover:bg-violet-700 disabled:bg-gray-400"
             >
               {isLoading ? 'Generating...' : 'Generate Thumbnail'}
             </button>
           </div>
         )}
         {thumbnailSrc && (
-          <div className="mt-6">
-            <h2 className="text-2xl font-semibold mb-4">Generated Thumbnail</h2>
-            <img src={thumbnailSrc} alt="Generated Thumbnail" className="w-full rounded-lg" />
+          <div>
+            <h2>Generated Thumbnail</h2>
+            <img src={thumbnailSrc} alt="Generated Thumbnail" width="100%" />
             <a
               href={thumbnailSrc}
               download="thumbnail.jpg"
-              className="mt-4 w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 text-center block"
             >
               Download Thumbnail
             </a>
