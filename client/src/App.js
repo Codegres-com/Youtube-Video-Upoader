@@ -38,8 +38,8 @@ function App() {
     const ffmpeg = ffmpegRef.current;
     await ffmpeg.writeFile('input.mp4', await fetchFile(videoFile));
 
-    // Seek to the 1-second mark and grab one frame
-    await ffmpeg.exec(['-i', 'input.mp4', '-ss', '1', '-vframes', '1', 'output.jpg']);
+    // Seek to the 1-minute mark and grab one frame
+    await ffmpeg.exec(['-i', 'input.mp4', '-ss', '60', '-vframes', '1', 'output.jpg']);
     const data = await ffmpeg.readFile('output.jpg');
     const url = URL.createObjectURL(new Blob([data.buffer], { type: 'image/jpeg' }));
     setThumbnailSrc(url);
