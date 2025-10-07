@@ -69,27 +69,6 @@ Create a web app where users can upload an MP4 video and generate a **thumbnail 
 
 ---
 
-## 📆 **Development Roadmap**
-
-### Phase 1 — MVP (1–2 weeks)
-
-* File upload
-* Extract first frame as thumbnail
-* Download thumbnail
-
-### Phase 2 — Customization (2 weeks)
-
-* Add text, logo, and overlays
-* Preview thumbnail in real-time
-
-### Phase 3 — Advanced Features (2–3 weeks)
-
-* Allow timestamp selection for frame
-* AI-generated “best frame” suggestion
-* Batch thumbnail generation
-
----
-
 ## ⚡ **Optional Enhancements**
 
 * **Drag & Drop UI** for quick uploads
